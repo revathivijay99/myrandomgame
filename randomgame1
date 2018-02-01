@@ -1,0 +1,31 @@
+import random
+lol=1
+
+while lol==1:
+
+  print("I will think of a number between 1 and 10. You have 5 chances to guess it right. I'll give you hints everytime you guess.")
+
+  name = input("enter your name:") 
+  print("Hello," , name)
+
+  x=random.randint(1,10)
+
+  tries=1
+  for tries in range(1,4):
+    inval=int(input("Enter a no between 1 and 10:"))
+  
+    if inval > x :
+      print("Guess is higher.")
+    elif inval < x :
+      print("Guess is lower.")
+    elif inval == x :
+      
+      print("You got it right, You've won the game in", tries, "tries")
+      tries =1
+      break
+    else:
+      print("Enter a no only between 1 and 10.")
+  else:
+    print("3 chances over. You lost.","The number I thought of was",x)
+    
+  
